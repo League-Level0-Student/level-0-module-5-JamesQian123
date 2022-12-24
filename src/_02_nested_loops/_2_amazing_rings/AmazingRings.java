@@ -49,6 +49,7 @@ public class AmazingRings extends PApplet {
 
     @Override
     public void setup() {
+    	size()
 
     }
 

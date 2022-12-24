@@ -8,7 +8,15 @@ public class Prime_or_not {
 		// TODO Auto-generated method stub
 		String numberAsString = JOptionPane.showInputDialog("Give me a number");
 		int number = Integer.parseInt(numberAsString);
-		if(number %% )
+		for(int i = 2;i<number; i++) {
+			if(number%i == 0) {
+				JOptionPane.showMessageDialog(null, "That number is not prime");
+				System.exit(0);
+			}
+			
+			}
+			
+		}JOptionPane.showMessageDialog(null, "That number is prime ");
 	}
 
 }
