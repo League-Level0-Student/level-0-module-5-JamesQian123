@@ -12,10 +12,24 @@ public class Calculator {
 		int number2 = Integer.parseInt(input2);
 		int task = JOptionPane.showOptionDialog(null, "What do you choose?", "Calculator", 0,
 				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "divide", "multiply", "subtract", "add" }, null);
-
+		//System.out.println(task);
 		// 3) Call the correct method depending on what option the user chooses
+		double answer =  0;
 		
-		// 4) Call the result() method and put the answer in a pop-up
+		if(task == 3) {
+			 answer = add(number1, number2);
+		}
+		else if(task == 2) {
+			answer = subtract(number1,number2);
+		}
+		else if(task == 1) {
+			answer = multiply(number1,number2);
+		}
+		else if(task == 0) {
+			answer = divide(number1,number2);
+		}
+		//// 4) Call the result() method and put the answer in a pop-up
+		JOptionPane.showMessageDialog(null, result(answer));
 	}
 	
 	// 1) Make 4 static methods (add, subtract, multiply, divide)
@@ -33,8 +47,8 @@ public class Calculator {
 			int metal = wood * concrete; 
 			return metal;
 		}
-		public static int  divide(int airpods, int phone) {
-			int computer = airpods / phone;
+		public static double  divide(int airpods, int phone) {
+			double computer = airpods / phone;
 			return computer;
 		}
 	 
@@ -42,6 +56,10 @@ public class Calculator {
 	// 2) Make a static method called " result" that takes a number
 	//		as a parameter and returns the number in a string
 	//		EX: "Your answer is " + number;
+		public static String result(double waterbottle) {
+			String water = "Your answer is " + waterbottle;
+			return water;
+		}
 
 	
 }
